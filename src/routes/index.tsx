@@ -1,24 +1,288 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Nav } from "@/components/site/Nav";
+import { Footer } from "@/components/site/Footer";
+import heroPort from "@/assets/hero-port.jpg";
+import petcoke from "@/assets/petcoke.jpg";
+import ship from "@/assets/ship.jpg";
+import dubai from "@/assets/dubai.jpg";
+import plant from "@/assets/plant.jpg";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div>
+      <Nav variant="over-dark" />
+
+      {/* HERO */}
+      <section className="relative min-h-screen flex flex-col justify-end bg-navy-ink text-ivory overflow-hidden">
+        <img
+          src={heroPort}
+          alt="Bulk cargo terminal loading coal and petcoke at dusk"
+          width={1920}
+          height={1200}
+          className="absolute inset-0 w-full h-full object-cover opacity-55"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-ink/85 via-navy-ink/40 to-navy-ink" />
+
+        <div className="relative container-x pt-40 pb-20 md:pb-28">
+          <div className="grid md:grid-cols-12 gap-10 items-end">
+            <div className="md:col-span-9">
+              <div className="flex items-center gap-4 font-mono text-[0.7rem] tracking-[0.28em] uppercase text-ivory/70">
+                <span className="w-10 h-px bg-ivory/50" />
+                Established Dubai · MMVIII
+              </div>
+              <h1 className="mt-8 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
+                Fueling the industry<br />
+                <span className="italic text-ivory/80">that builds the world.</span>
+              </h1>
+              <p className="mt-10 max-w-2xl text-lg text-ivory/75 leading-relaxed">
+                A private commodities house trading petroleum coke and thermal
+                coal to cement, power and steel producers across four continents.
+                Origination, chartering, financing — under one roof, from the Gulf.
+              </p>
+              <div className="mt-12 flex flex-wrap gap-4">
+                <Link to="/products" className="btn-outline-light">Our Commodities</Link>
+                <Link to="/contact" className="btn-primary bg-ivory text-navy-ink hover:bg-ivory/90">
+                  Open a Trade →
+                </Link>
+              </div>
+            </div>
+            <div className="md:col-span-3 md:text-right">
+              <div className="font-mono text-[0.7rem] tracking-[0.24em] uppercase text-ivory/50">Latest Fixture</div>
+              <div className="mt-3 font-display text-3xl">Panamax 68,000 MT</div>
+              <div className="mt-1 text-ivory/60 text-sm">Ruwais → Chennai · Loading</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Marquee stats */}
+        <div className="relative border-t border-ivory/15 bg-navy-ink/60 backdrop-blur">
+          <div className="container-x grid grid-cols-2 md:grid-cols-4 divide-x divide-ivory/10">
+            {[
+              ["4.2M", "MT traded annually"],
+              ["27", "Countries served"],
+              ["18", "Loading terminals"],
+              ["2008", "Year founded"],
+            ].map(([n, l]) => (
+              <div key={l} className="py-8 px-4 md:px-8 text-center md:text-left">
+                <div className="font-display text-4xl md:text-5xl">{n}</div>
+                <div className="mt-2 font-mono text-[0.68rem] tracking-[0.22em] uppercase text-ivory/60">{l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INTRODUCTION */}
+      <section className="py-28 md:py-36">
+        <div className="container-x grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <div className="eyebrow">— A House Note</div>
+            <h2 className="mt-6 font-display text-4xl md:text-5xl leading-tight">
+              Carbon, moved with discipline.
+            </h2>
+          </div>
+          <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-relaxed text-foreground/80">
+            <p>
+              Radiant Trading Co. was founded in Dubai in 2008 to move a single
+              cargo of petroleum coke from Jubail to a cement kiln in Karachi.
+              Seventeen years later, we handle over four million tonnes annually
+              — but our conviction is unchanged.
+            </p>
+            <p>
+              We are a private, family-financed house. We do not chase volume;
+              we chase counterparties who value certainty. Every cargo we
+              originate is backed by our own paper, our own vessels on
+              time-charter, and a name our buyers have trusted for two decades.
+            </p>
+            <div className="pt-6 flex items-center gap-4">
+              <div className="font-display italic text-2xl">— The Managing Partners</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="container-x"><div className="rule" /></div>
+
+      {/* PRODUCTS */}
+      <section className="py-28 md:py-36">
+        <div className="container-x">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div>
+              <div className="eyebrow">— 01 / Commodities</div>
+              <h2 className="mt-6 font-display text-4xl md:text-6xl">The Product Book</h2>
+            </div>
+            <Link to="/products" className="btn-ghost self-start">All specifications →</Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10">
+            <ProductCard
+              img={petcoke}
+              index="A."
+              title="Petroleum Coke"
+              specs={[
+                ["Sulfur", "3.5 – 7.5%"],
+                ["HGI", "35 – 55"],
+                ["Origin", "USGC · Saudi Arabia · Venezuela"],
+              ]}
+              body="Fuel-grade and anode-grade petcoke, sourced from long-term
+                relationships with refineries in the US Gulf, Saudi Arabia and
+                the Bolivarian Republic of Venezuela."
+            />
+            <ProductCard
+              img={plant}
+              index="B."
+              title="Thermal Coal"
+              specs={[
+                ["Calorific Value", "5,500 – 6,700 GAR"],
+                ["Ash", "8 – 15%"],
+                ["Origin", "Indonesia · South Africa · Colombia"],
+              ]}
+              body="High-CV thermal coal for cement, brick and independent power
+                producers. RB1, RB2, and Indonesian sub-bituminous grades in
+                Supramax and Panamax parcels."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* GLOBAL FLOW */}
+      <section className="relative py-28 md:py-36 bg-navy-ink text-ivory overflow-hidden">
+        <img
+          src={ship}
+          alt="Overhead view of bulk carrier at berth"
+          width={1600}
+          height={1000}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-ink via-navy-ink/70 to-transparent" />
+
+        <div className="relative container-x">
+          <div className="max-w-3xl">
+            <div className="eyebrow text-ivory/60">— 02 / Reach</div>
+            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-tight">
+              From the Arabian Gulf<br />
+              <span className="italic text-ivory/80">to twenty-seven markets.</span>
+            </h2>
+            <p className="mt-8 text-lg text-ivory/75 max-w-2xl leading-relaxed">
+              We ship Supramax, Panamax and Capesize parcels FOB, CFR and CIF —
+              handling chartering, inspection, insurance and letters of credit
+              through our house desks in Dubai, Singapore and Geneva.
+            </p>
+          </div>
+
+          <div className="mt-20 grid md:grid-cols-3 gap-x-12 gap-y-14">
+            {[
+              ["Origination", "Refinery and mine-mouth relationships across the US Gulf, Saudi Arabia, Indonesia, South Africa and Colombia."],
+              ["Chartering", "Dedicated shipbroking desk with time-chartered tonnage and long-standing owner relationships."],
+              ["Structured Trade", "In-house LC issuance, prepayment facilities and off-take structures for tier-one industrial buyers."],
+            ].map(([t, b], i) => (
+              <div key={t} className="border-t border-ivory/20 pt-6">
+                <div className="font-mono text-[0.7rem] tracking-[0.24em] text-ivory/50">0{i + 1}</div>
+                <h3 className="mt-3 font-display text-2xl">{t}</h3>
+                <p className="mt-4 text-ivory/70 leading-relaxed">{b}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CREDENTIALS */}
+      <section className="py-28 md:py-36">
+        <div className="container-x grid md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-6">
+            <img
+              src={dubai}
+              alt="Dubai financial district at blue hour"
+              width={1600}
+              height={1000}
+              loading="lazy"
+              className="w-full aspect-[4/3] object-cover"
+            />
+          </div>
+          <div className="md:col-span-6 md:pl-6">
+            <div className="eyebrow">— 03 / The House</div>
+            <h2 className="mt-6 font-display text-4xl md:text-5xl leading-tight">
+              A private house.<br />
+              <span className="italic">Long-term counterparties only.</span>
+            </h2>
+            <p className="mt-8 text-lg text-foreground/75 leading-relaxed">
+              Radiant is registered with the Dubai Multi Commodities Centre and
+              the DMCC-DGCX. Our credit is underwritten by two Gulf banks and
+              our operations are ISO 9001 certified. We accept new counterparties
+              by referral.
+            </p>
+            <ul className="mt-10 space-y-4">
+              {[
+                "DMCC Member · License No. 4XXXXX",
+                "ISO 9001:2015 Quality Management",
+                "SGS · Cotecna · Alfred H Knight — Independent Inspection",
+                "Members: Argus, Platts, coaltrans",
+              ].map((l) => (
+                <li key={l} className="flex items-start gap-4 text-foreground/80">
+                  <span className="mt-2 w-6 h-px bg-navy-ink" />
+                  <span className="font-mono text-sm tracking-wider">{l}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-navy-ink text-ivory">
+        <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-10 items-end">
+          <div className="md:col-span-8">
+            <div className="eyebrow text-ivory/60">— Open a Trade</div>
+            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-tight">
+              Every cargo begins<br />with a conversation.
+            </h2>
+          </div>
+          <div className="md:col-span-4 md:text-right">
+            <Link to="/contact" className="btn-outline-light">Contact the Trade Desk →</Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
+  );
+}
+
+function ProductCard({
+  img, index, title, body, specs,
+}: {
+  img: string; index: string; title: string; body: string; specs: [string, string][];
+}) {
+  return (
+    <article className="group">
+      <div className="overflow-hidden bg-navy-ink">
+        <img
+          src={img}
+          alt={title}
+          width={1200}
+          height={900}
+          loading="lazy"
+          className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </div>
+      <div className="mt-6 flex items-baseline gap-4">
+        <span className="font-mono text-sm text-muted-foreground">{index}</span>
+        <h3 className="font-display text-3xl md:text-4xl">{title}</h3>
+      </div>
+      <p className="mt-4 text-foreground/75 leading-relaxed max-w-lg">{body}</p>
+      <dl className="mt-6 border-t border-border">
+        {specs.map(([k, v]) => (
+          <div key={k} className="grid grid-cols-3 gap-4 py-3 border-b border-border">
+            <dt className="font-mono text-[0.72rem] tracking-[0.18em] uppercase text-muted-foreground">{k}</dt>
+            <dd className="col-span-2 text-foreground/85">{v}</dd>
+          </div>
+        ))}
+      </dl>
+    </article>
   );
 }

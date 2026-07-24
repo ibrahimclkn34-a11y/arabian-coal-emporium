@@ -20,13 +20,13 @@ const products = [
   {
     group: "Petroleum Coke",
     img: petcoke,
-    body: "A solid carbon fuel produced by oil refineries. We move fuel-grade petcoke for cement and power producers, and anode-grade material for the aluminium sector. Sourced from long-term refinery relationships and delivered on schedule.",
+    body: "A solid carbon fuel produced by oil refineries. We move fuel-grade petcoke for cement and power producers, and anode-grade material for the aluminium sector. Sourced through long-term refinery relationships and delivered on schedule.",
     tags: ["Fuel-grade", "Anode-grade", "Refinery direct"],
   },
   {
     group: "Thermal Coal",
     img: plant,
-    body: "A primary energy source for cement, brick and independent power producers. We handle high and medium calorific coal from Indonesia, South Africa and Colombia, in Supramax, Panamax and Capesize parcels.",
+    body: "A primary energy source for cement, brick and independent power producers. We handle high and medium calorific coal from major coal basins, in Supramax, Panamax and Capesize parcels.",
     tags: ["High-CV", "Medium-CV", "Cement & power"],
   },
 ];
@@ -43,9 +43,10 @@ function Products() {
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-foreground/75 leading-relaxed">
             Our business is built around two commodities: petroleum coke and
-            thermal coal. We do not publish hard specifications online — every
-            enquiry is handled directly by the trade desk, where terms, origin
-            and quality are matched to the buyer's actual plant requirements.
+            thermal coal. We supply power plants, cement factories and other
+            industrial buyers across the Middle East, Africa, Asia and Europe.
+            We do not publish hard specifications online — every enquiry is
+            handled directly by the trade desk.
           </p>
         </section>
 

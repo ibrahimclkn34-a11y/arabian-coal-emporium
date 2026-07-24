@@ -32,7 +32,7 @@ function Home() {
             <div className="md:col-span-9">
               <div className="flex items-center gap-4 font-mono text-[0.7rem] tracking-[0.28em] uppercase text-ivory/70">
                 <span className="w-10 h-px bg-ivory/50" />
-                Established Dubai · MMVIII
+                Established Dubai · MMXXIV
               </div>
               <h1 className="mt-8 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
                 Fueling the industry<br />
@@ -62,10 +62,10 @@ function Home() {
         <div className="relative border-t border-ivory/15 bg-navy-ink/60 backdrop-blur">
           <div className="container-x grid grid-cols-2 md:grid-cols-4 divide-x divide-ivory/10">
             {[
-              ["4.2M", "MT traded annually"],
+              ["4M+", "MT traded annually"],
               ["27", "Countries served"],
               ["18", "Loading terminals"],
-              ["2008", "Year founded"],
+              ["2024", "Year founded in UAE"],
             ].map(([n, l]) => (
               <div key={l} className="py-8 px-4 md:px-8 text-center md:text-left">
                 <div className="font-display text-4xl md:text-5xl">{n}</div>
@@ -87,16 +87,18 @@ function Home() {
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-relaxed text-foreground/80">
             <p>
-              Radiant Trading Co. was founded in Dubai in 2008 to move a single
-              cargo of petroleum coke from Jubail to a cement kiln in Karachi.
-              Seventeen years later, we handle over four million tonnes annually
-              — but our conviction is unchanged.
+              Radiant Trading Co. was established in Dubai in 2024, but the
+              people behind it are not new to carbon. For three decades the
+              same partners moved petroleum coke and thermal coal out of Turkey
+              to cement, power and steel producers across the Mediterranean,
+              Black Sea and Middle East.
             </p>
             <p>
-              We are a private, family-financed house. We do not chase volume;
-              we chase counterparties who value certainty. Every cargo we
-              originate is backed by our own paper, our own vessels on
-              time-charter, and a name our buyers have trusted for two decades.
+              The UAE was the natural next step. From here we are closer to the
+              Gulf refineries that produce the world's largest petcoke volumes,
+              and to the Asian and African markets that consume them. We remain
+              a private, family-financed house: we do not chase volume, we
+              chase counterparties who value certainty.
             </p>
             <div className="pt-6 flex items-center gap-4">
               <div className="font-display italic text-2xl">— The Managing Partners</div>
@@ -124,26 +126,24 @@ function Home() {
               index="A."
               title="Petroleum Coke"
               specs={[
-                ["Sulfur", "3.5 – 7.5%"],
-                ["HGI", "35 – 55"],
-                ["Origin", "USGC · Saudi Arabia · Venezuela"],
+                ["Use", "Fuel for cement, power & industrial boilers"],
+                ["Origins", "US Gulf · Saudi Arabia · Venezuela"],
               ]}
-              body="Fuel-grade and anode-grade petcoke, sourced from long-term
-                relationships with refineries in the US Gulf, Saudi Arabia and
-                the Bolivarian Republic of Venezuela."
+              body="Fuel-grade and anode-grade petcoke sourced through long-term
+                refinery relationships and delivered on firm contracts to
+                industrial buyers who need reliable, repeat volumes."
             />
             <ProductCard
               img={plant}
               index="B."
               title="Thermal Coal"
               specs={[
-                ["Calorific Value", "5,500 – 6,700 GAR"],
-                ["Ash", "8 – 15%"],
-                ["Origin", "Indonesia · South Africa · Colombia"],
+                ["Use", "Energy for cement, brick & power producers"],
+                ["Origins", "Indonesia · South Africa · Colombia"],
               ]}
-              body="High-CV thermal coal for cement, brick and independent power
-                producers. RB1, RB2, and Indonesian sub-bituminous grades in
-                Supramax and Panamax parcels."
+              body="High-CV thermal coal for producers who depend on consistent
+                quality and schedule. We handle Supramax, Panamax and Capesize
+                parcels on CFR, CIF and FOB terms."
             />
           </div>
         </div>

@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Radiant Trading Co." },
-      { name: "description", content: "A private Dubai commodities house, family-financed, trading petcoke and thermal coal since 2008." },
+      { name: "description", content: "A private Dubai commodities house, founded in 2024 and built on three decades of carbon trading experience in Turkey." },
       { property: "og:title", content: "About — Radiant Trading Co." },
-      { property: "og:description", content: "A private Dubai commodities house, family-financed, trading petcoke and thermal coal since 2008." },
+      { property: "og:description", content: "A private Dubai commodities house, founded in 2024 and built on three decades of carbon trading experience in Turkey." },
     ],
   }),
   component: About,
@@ -23,8 +23,8 @@ function About() {
         <section className="container-x py-16 md:py-24">
           <div className="eyebrow">— The House</div>
           <h1 className="mt-6 font-display text-5xl md:text-7xl leading-[1.02] max-w-4xl">
-            Seventeen years<br />
-            <span className="italic">moving carbon out of the Gulf.</span>
+            A new Dubai house.<br />
+            <span className="italic">Three decades of carbon behind it.</span>
           </h1>
         </section>
 
@@ -35,16 +35,19 @@ function About() {
             </div>
             <div className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80">
               <p>
-                Radiant Trading Co. was founded in 2008 by three partners with a
-                shared conviction: that the Gulf's advantage in petroleum coke
-                and its access to seaborne thermal coal would only compound as
-                Asian and African industry grew.
+                Radiant Trading Co. was founded in Dubai in 2024 by partners
+                who spent the previous three decades trading petroleum coke
+                and thermal coal in Turkey. The move to the UAE was a deliberate
+                next step: closer to the Gulf's refineries, closer to the
+                seaborne lanes that feed Asian and African industry, and closer
+                to the counterparties who value certainty over volume.
               </p>
               <p>
-                We began as a two-desk operation in the DMCC free zone. Today we
-                move over four million tonnes a year — but we remain a private,
-                family-financed house. We hold no external equity. We answer
-                only to our counterparties and to our own name.
+                We are a private, family-financed house. We hold no external
+                equity and answer only to our counterparties and to our own
+                name. What we lacked in years on a Dubai letterhead, we made up
+                for in relationships, shipment records and a reputation built
+                one cargo at a time.
               </p>
               <p>
                 Our discipline is unfashionable: we would rather turn away

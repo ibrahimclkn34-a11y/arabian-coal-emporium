@@ -95,7 +95,7 @@ function Home() {
               shape the global market.
             </p>
             <p>
-              We are a private, family-financed house. We do not chase volume;
+              We are a private commodities house. We do not chase volume;
               we chase certainty. Every cargo is delivered on our own paper, to
               counterparties we know personally, with inspection at every load
               and discharge.

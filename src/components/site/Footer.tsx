@@ -15,11 +15,12 @@ export function Footer() {
             <p className="mt-6 max-w-md text-ivory/70 leading-relaxed">
               A private commodities house headquartered in the United Arab Emirates,
               trading petroleum coke and thermal coal to industrial buyers across
-              four continents since 2024. Built on three decades of experience in Turkey.
+              the Middle East, Africa, Asia and Europe. Built on three decades of
+              experience in Turkey.
             </p>
             <div className="mt-8 hairline opacity-30 max-w-md" />
             <div className="mt-6 font-mono text-[0.7rem] tracking-[0.22em] uppercase text-ivory/50">
-              DMCC · Jumeirah Lakes Towers · Dubai · UAE
+              Dubai · United Arab Emirates
             </div>
           </div>
 
@@ -36,9 +37,8 @@ export function Footer() {
           <div className="md:col-span-4">
             <div className="eyebrow text-ivory/50">Head Office</div>
             <address className="not-italic mt-5 text-ivory/80 leading-relaxed">
-              Level 27, Cluster W<br />
-              Jumeirah Lakes Towers<br />
-              Dubai, United Arab Emirates
+              Dubai<br />
+              United Arab Emirates
             </address>
             <div className="mt-6 space-y-1 text-ivory/80 font-mono text-sm">
               <div>T &nbsp;+971 4 000 0000</div>
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
 
           <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[0.7rem] tracking-[0.22em] uppercase text-ivory/50 font-mono">
-          <div>© {new Date().getFullYear()} Radiant Trading Co. LLC</div>
+          <div>© {new Date().getFullYear()} Radiant Trading Co.</div>
           <div>Est. MMXXIV · Dubai</div>
         </div>
       </div>

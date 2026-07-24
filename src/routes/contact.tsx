@@ -34,9 +34,8 @@ function Contact() {
             </p>
 
             <div className="mt-14 space-y-8">
-              <Field label="Head Office" value={<>Level 27, Cluster W<br />Jumeirah Lakes Towers<br />Dubai, United Arab Emirates</>} />
+              <Field label="Head Office" value={<>Dubai<br />United Arab Emirates</>} />
               <Field label="Trade Desk" value="trade@radianttradingco.ae" mono />
-              <Field label="Chartering" value="chartering@radianttradingco.ae" mono />
               <Field label="Telephone" value="+971 4 000 0000" mono />
               <Field label="Hours" value="Sun – Thu · 08:00 – 18:00 GST" mono />
             </div>
@@ -68,8 +67,8 @@ function Contact() {
                     <Input name="email" type="email" label="Email" />
                     <Input name="country" label="Country" />
                   </div>
-                  <Select name="commodity" label="Commodity" options={["Petroleum Coke — Fuel Grade", "Petroleum Coke — Anode Grade", "Thermal Coal — RB1 / RB2", "Thermal Coal — Indonesian", "Other"]} />
-                  <Input name="volume" label="Indicative volume (MT / month)" />
+                  <Select name="commodity" label="Commodity" options={["Petroleum Coke", "Thermal Coal", "Other"]} />
+                  <Input name="volume" label="Indicative volume" />
                   <div>
                     <label className="block font-mono text-[0.7rem] tracking-[0.2em] uppercase text-ivory/60 mb-2">Message</label>
                     <textarea

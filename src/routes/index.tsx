@@ -65,7 +65,7 @@ function Home() {
               ["30+", "Years in carbon trading"],
               ["4", "Continents served"],
               ["2024", "Year established in UAE"],
-              ["Private", "Family-financed house"],
+              ["20+", "Companies worked with"],
             ].map(([n, l]) => (
               <div key={l} className="py-8 px-4 md:px-8 text-center md:text-left">
                 <div className="font-display text-4xl md:text-5xl">{n}</div>

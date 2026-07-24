@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logoDark from "@/assets/radiant-logo-dark.png.asset.json";
 
 export function Footer() {
   return (
@@ -7,16 +8,13 @@ export function Footer() {
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <span className="inline-block w-10 h-10 border border-ivory/60 relative">
-                <span className="absolute inset-1 border border-ivory/40" />
-              </span>
-              <span className="font-display text-2xl">Radiant Trading Co.</span>
+              <img src={logoDark.url} alt="Radiant Trading" className="h-14 w-auto" />
             </div>
             <p className="mt-6 max-w-md text-ivory/70 leading-relaxed">
               A private commodities house headquartered in the United Arab Emirates,
-              trading petroleum coke and thermal coal to industrial buyers across
-              the Middle East, Africa, Asia and Europe. Built on three decades of
-              experience in Turkey.
+              trading petroleum coke and thermal coal to power plants and cement
+              factories across the Middle East, Africa, Asia and Europe. Built on
+              three decades of experience in Turkey.
             </p>
             <div className="mt-8 hairline opacity-30 max-w-md" />
             <div className="mt-6 font-mono text-[0.7rem] tracking-[0.22em] uppercase text-ivory/50">
@@ -37,12 +35,12 @@ export function Footer() {
           <div className="md:col-span-4">
             <div className="eyebrow text-ivory/50">Head Office</div>
             <address className="not-italic mt-5 text-ivory/80 leading-relaxed">
-              Dubai<br />
-              United Arab Emirates
+              IFZA Business Park, DDP 50404<br />
+              Dubai, United Arab Emirates
             </address>
             <div className="mt-6 space-y-1 text-ivory/80 font-mono text-sm">
-              <div>T &nbsp;+971 4 000 0000</div>
-              <div>E &nbsp;trade@radianttradingco.ae</div>
+              <div>T &nbsp;+971 58 576 3434</div>
+              <div>E &nbsp;radiant@radiant-trading.co</div>
             </div>
           </div>
         </div>

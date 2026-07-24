@@ -34,9 +34,9 @@ function Contact() {
             </p>
 
             <div className="mt-14 space-y-8">
-              <Field label="Head Office" value={<>Dubai<br />United Arab Emirates</>} />
-              <Field label="Trade Desk" value="trade@radianttradingco.ae" mono />
-              <Field label="Telephone" value="+971 4 000 0000" mono />
+              <Field label="Head Office" value={<>IFZA Business Park, DDP 50404<br />Dubai, United Arab Emirates</>} />
+              <Field label="Trade Desk" value="radiant@radiant-trading.co" mono />
+              <Field label="Telephone" value="+971 58 576 3434" mono />
               <Field label="Hours" value="Sun – Thu · 08:00 – 18:00 GST" mono />
             </div>
           </div>

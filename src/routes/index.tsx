@@ -40,8 +40,8 @@ function Home() {
               </h1>
               <p className="mt-10 max-w-2xl text-lg text-ivory/75 leading-relaxed">
                 A private commodities house trading petroleum coke and thermal
-                coal to cement, power and steel producers across four continents.
-                Origination, chartering, financing — under one roof, from the Gulf.
+                coal to cement, power and steel producers across the Middle East,
+                Africa, Asia and Europe.
               </p>
               <div className="mt-12 flex flex-wrap gap-4">
                 <Link to="/products" className="btn-outline-light">Our Commodities</Link>
@@ -51,9 +51,9 @@ function Home() {
               </div>
             </div>
             <div className="md:col-span-3 md:text-right">
-              <div className="font-mono text-[0.7rem] tracking-[0.24em] uppercase text-ivory/50">Latest Fixture</div>
-              <div className="mt-3 font-display text-3xl">Panamax 68,000 MT</div>
-              <div className="mt-1 text-ivory/60 text-sm">Ruwais → Chennai · Loading</div>
+              <div className="font-mono text-[0.7rem] tracking-[0.24em] uppercase text-ivory/50">Experience</div>
+              <div className="mt-3 font-display text-3xl">30 Years</div>
+              <div className="mt-1 text-ivory/60 text-sm">In carbon trading</div>
             </div>
           </div>
         </div>
@@ -62,10 +62,10 @@ function Home() {
         <div className="relative border-t border-ivory/15 bg-navy-ink/60 backdrop-blur">
           <div className="container-x grid grid-cols-2 md:grid-cols-4 divide-x divide-ivory/10">
             {[
-              ["4M+", "MT traded annually"],
-              ["27", "Countries served"],
-              ["18", "Loading terminals"],
-              ["2024", "Year founded in UAE"],
+              ["30+", "Years in carbon trading"],
+              ["4", "Continents served"],
+              ["2024", "Year established in UAE"],
+              ["Private", "Family-financed house"],
             ].map(([n, l]) => (
               <div key={l} className="py-8 px-4 md:px-8 text-center md:text-left">
                 <div className="font-display text-4xl md:text-5xl">{n}</div>
@@ -87,21 +87,21 @@ function Home() {
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-relaxed text-foreground/80">
             <p>
-              Radiant Trading Co. was established in Dubai in 2024, but the
-              people behind it are not new to carbon. For three decades the
-              same partners moved petroleum coke and thermal coal out of Turkey
-              to cement, power and steel producers across the Mediterranean,
-              Black Sea and Middle East.
+              Radiant Trading Co. was established in Dubai in 2024, built on
+              three decades of experience in carbon trading in Turkey. The same
+              partners who moved petroleum coke and thermal coal across the
+              Mediterranean, Black Sea and Middle East now operate from the UAE,
+              closer to the refineries, shipping lanes and counterparties that
+              shape the global market.
             </p>
             <p>
-              The UAE was the natural next step. From here we are closer to the
-              Gulf refineries that produce the world's largest petcoke volumes,
-              and to the Asian and African markets that consume them. We remain
-              a private, family-financed house: we do not chase volume, we
-              chase counterparties who value certainty.
+              We are a private, family-financed house. We do not chase volume;
+              we chase certainty. Every cargo is delivered on our own paper, to
+              counterparties we know personally, with inspection at every load
+              and discharge.
             </p>
             <div className="pt-6 flex items-center gap-4">
-              <div className="font-display italic text-2xl">— The Managing Partners</div>
+              <div className="font-display italic text-2xl">— Trust, built one cargo at a time</div>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@ function Home() {
               title="Petroleum Coke"
               specs={[
                 ["Use", "Fuel for cement, power & industrial boilers"],
-                ["Origins", "US Gulf · Saudi Arabia · Venezuela"],
+                ["Origins", "Refinery direct from established relationships"],
               ]}
               body="Fuel-grade and anode-grade petcoke sourced through long-term
                 refinery relationships and delivered on firm contracts to
@@ -139,7 +139,7 @@ function Home() {
               title="Thermal Coal"
               specs={[
                 ["Use", "Energy for cement, brick & power producers"],
-                ["Origins", "Indonesia · South Africa · Colombia"],
+                ["Origins", "Major coal basins through mine-mouth partners"],
               ]}
               body="High-CV thermal coal for producers who depend on consistent
                 quality and schedule. We handle Supramax, Panamax and Capesize
@@ -166,20 +166,20 @@ function Home() {
             <div className="eyebrow text-ivory/60">— 02 / Reach</div>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-tight">
               From the Arabian Gulf<br />
-              <span className="italic text-ivory/80">to twenty-seven markets.</span>
+              <span className="italic text-ivory/80">to markets across four continents.</span>
             </h2>
             <p className="mt-8 text-lg text-ivory/75 max-w-2xl leading-relaxed">
               We ship Supramax, Panamax and Capesize parcels FOB, CFR and CIF —
               handling chartering, inspection, insurance and letters of credit
-              through our house desks in Dubai, Singapore and Geneva.
+              through our house desks in the Middle East, Europe and Asia.
             </p>
           </div>
 
           <div className="mt-20 grid md:grid-cols-3 gap-x-12 gap-y-14">
             {[
-              ["Origination", "Refinery and mine-mouth relationships across the US Gulf, Saudi Arabia, Indonesia, South Africa and Colombia."],
-              ["Chartering", "Dedicated shipbroking desk with time-chartered tonnage and long-standing owner relationships."],
-              ["Structured Trade", "In-house LC issuance, prepayment facilities and off-take structures for tier-one industrial buyers."],
+              ["Origination", "Long-term relationships with refineries and mine-mouth partners. We hold regular liftings — not spot allocations."],
+              ["Chartering", "In-house shipbroking desk with time-chartered tonnage and long-standing owner relationships for voyage cargoes."],
+              ["Structured Trade", "In-house letters of credit, prepayment facilities and multi-year off-take structures for tier-one industrial buyers."],
             ].map(([t, b], i) => (
               <div key={t} className="border-t border-ivory/20 pt-6">
                 <div className="font-mono text-[0.7rem] tracking-[0.24em] text-ivory/50">0{i + 1}</div>
@@ -211,17 +211,18 @@ function Home() {
               <span className="italic">Long-term counterparties only.</span>
             </h2>
             <p className="mt-8 text-lg text-foreground/75 leading-relaxed">
-              Radiant is registered with the Dubai Multi Commodities Centre and
-              the DMCC-DGCX. Our credit is underwritten by two Gulf banks and
-              our operations are ISO 9001 certified. We accept new counterparties
-              by referral.
+              Radiant is a UAE-registered commodities company headquartered in
+              Dubai. Our credit is supported by committed Gulf banking lines and
+              our operations are independently audited. We accept new
+              counterparties by referral and operate on the principle that every
+              trade must be transparent, financeable and enforceable.
             </p>
             <ul className="mt-10 space-y-4">
               {[
-                "DMCC Member · License No. 4XXXXX",
-                "ISO 9001:2015 Quality Management",
-                "SGS · Cotecna · Alfred H Knight — Independent Inspection",
-                "Members: Argus, Platts, coaltrans",
+                "UAE-registered commodities company",
+                "Independent quality inspection at every load",
+                "Letters of credit and structured trade support",
+                "Counterparty screening on every trade",
               ].map((l) => (
                 <li key={l} className="flex items-start gap-4 text-foreground/80">
                   <span className="mt-2 w-6 h-px bg-navy-ink" />

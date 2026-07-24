@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Radiant Trading Co." },
-      { name: "description", content: "A private Dubai commodities house, founded in 2024 and built on three decades of carbon trading experience in Turkey." },
+      { name: "description", content: "A private Dubai commodities house founded in 2024 and built on three decades of carbon trading experience in Turkey." },
       { property: "og:title", content: "About — Radiant Trading Co." },
-      { property: "og:description", content: "A private Dubai commodities house, founded in 2024 and built on three decades of carbon trading experience in Turkey." },
+      { property: "og:description", content: "A private Dubai commodities house founded in 2024 and built on three decades of carbon trading experience in Turkey." },
     ],
   }),
   component: About,
@@ -38,23 +38,21 @@ function About() {
                 Radiant Trading Co. was founded in Dubai in 2024 by partners
                 who spent the previous three decades trading petroleum coke
                 and thermal coal in Turkey. The move to the UAE was a deliberate
-                next step: closer to the Gulf's refineries, closer to the
-                seaborne lanes that feed Asian and African industry, and closer
-                to the counterparties who value certainty over volume.
+                next step: closer to the Gulf refineries, closer to the seaborne
+                lanes that feed global industry, and closer to the counterparties
+                who value certainty over volume.
               </p>
               <p>
                 We are a private, family-financed house. We hold no external
                 equity and answer only to our counterparties and to our own
-                name. What we lacked in years on a Dubai letterhead, we made up
-                for in relationships, shipment records and a reputation built
-                one cargo at a time.
+                name. What we built in Turkey — relationships, shipment records and
+                a reputation for reliability — now travels under a Dubai letterhead.
               </p>
               <p>
-                Our discipline is unfashionable: we would rather turn away
-                volume than take a cargo we cannot deliver on. We do not chase
-                spot. We do not overtrade our balance sheet. And we do not,
-                under any circumstance, take positions we cannot finance
-                ourselves.
+                Our discipline is unfashionable: we would rather turn away volume
+                than take a cargo we cannot deliver. We do not chase spot. We do
+                not overtrade our balance sheet. And we do not, under any
+                circumstance, take positions we cannot finance ourselves.
               </p>
             </div>
           </div>
@@ -64,14 +62,13 @@ function About() {
           <div className="container-x grid md:grid-cols-12 gap-10">
             <div className="md:col-span-4">
               <div className="eyebrow text-ivory/60">— Principles</div>
-              <h2 className="mt-6 font-display text-4xl md:text-5xl leading-tight">Four rules<br /><span className="italic">we do not bend.</span></h2>
+              <h2 className="mt-6 font-display text-4xl md:text-5xl leading-tight">Three rules<br /><span className="italic">we do not bend.</span></h2>
             </div>
             <div className="md:col-span-7 md:col-start-6 space-y-10">
               {[
-                ["Own Paper", "Every cargo is financed on Radiant's own balance sheet or through committed lines with two Gulf banks."],
-                ["Named Counterparties", "We onboard by referral. Every buyer and seller is known to a partner personally."],
-                ["Independent Inspection", "SGS, Cotecna or Alfred H Knight — always. No exception, at load and at discharge."],
-                ["No Sanctions Exposure", "We do not touch cargoes with any nexus to sanctioned jurisdictions or entities."],
+                ["Own Paper", "Every cargo is financed on our own balance sheet or through committed credit lines. No third-party risk is passed to the buyer."],
+                ["Named Counterparties", "We onboard by referral. Every buyer and seller is known to us personally, and every trade is backed by transparent documentation."],
+                ["Independent Inspection", "Independent surveyors inspect every cargo at load and at discharge. No exception."],
               ].map(([t, b], i) => (
                 <div key={t} className="border-t border-ivory/20 pt-6 grid grid-cols-12 gap-4">
                   <div className="col-span-2 font-mono text-[0.72rem] tracking-[0.22em] text-ivory/50">0{i + 1}</div>

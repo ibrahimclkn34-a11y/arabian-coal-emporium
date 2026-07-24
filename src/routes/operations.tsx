@@ -26,7 +26,7 @@ function Operations() {
           <div className="relative container-x py-20">
             <div className="eyebrow text-ivory/60">— Operations</div>
             <h1 className="mt-6 font-display text-5xl md:text-7xl leading-[1.02] max-w-4xl">
-              A single desk.<br /><span className="italic">From refinery gate to kiln door.</span>
+              A single desk.<br /><span className="italic">From refinery gate to plant door.</span>
             </h1>
           </div>
         </section>
@@ -34,12 +34,12 @@ function Operations() {
         <section className="container-x py-24">
           <div className="grid md:grid-cols-12 gap-10">
             {[
-              { n: "01", t: "Origination", b: "Long-term relationships with refineries in the US Gulf, Saudi Arabia and Venezuela, and mine-mouth tie-ups in Indonesia, South Africa and Colombia. We hold monthly liftings — not spot allocations." },
+              { n: "01", t: "Origination", b: "Long-term relationships with refineries and mine-mouth partners. We hold regular liftings — not spot allocations." },
               { n: "02", t: "Chartering", b: "In-house shipbroking desk. Supramax to Capesize tonnage on time-charter, plus long-standing owner relationships for voyage cargoes." },
-              { n: "03", t: "Inspection & Quality", b: "SGS, Cotecna and Alfred H Knight inspect every cargo at load and at discharge. Certificates are the buyer's — always." },
-              { n: "04", t: "Structured Trade", b: "In-house LC issuance through two Gulf banks, prepayment facilities, and multi-year off-take structures for tier-one industrial buyers." },
-              { n: "05", t: "Insurance & Risk", b: "Marine cargo cover placed through Lloyd's brokers. FX and freight exposure hedged on our own book." },
-              { n: "06", t: "Compliance", b: "Full KYC on every counterparty. Continuous screening against OFAC, EU and UN lists. No exceptions." },
+              { n: "03", t: "Inspection & Quality", b: "Independent surveyors inspect every cargo at load and at discharge. Certificates are the buyer's — always." },
+              { n: "04", t: "Structured Trade", b: "In-house letters of credit, prepayment facilities, and multi-year off-take structures for tier-one industrial buyers." },
+              { n: "05", t: "Insurance & Risk", b: "Marine cargo cover, with FX and freight exposure managed on our own book." },
+              { n: "06", t: "Compliance", b: "Full KYC on every counterparty. Continuous screening against international sanctions lists. No exceptions." },
             ].map((x) => (
               <div key={x.n} className="md:col-span-6 border-t-2 border-navy-ink pt-6">
                 <div className="font-mono text-[0.72rem] tracking-[0.22em] uppercase text-muted-foreground">{x.n}</div>
@@ -53,7 +53,12 @@ function Operations() {
         <section className="bg-secondary py-24">
           <div className="container-x">
             <div className="eyebrow">— Loading Terminals</div>
-            <h2 className="mt-6 font-display text-4xl md:text-5xl">Eighteen ports.<br /><span className="italic">Six flags.</span></h2>
+            <h2 className="mt-6 font-display text-4xl md:text-5xl">A global network of<br /><span className="italic">loading ports.</span></h2>
+            <p className="mt-8 max-w-2xl text-foreground/75 leading-relaxed">
+              We load regularly from terminals across the Arabian Gulf, the
+              Americas, Southeast Asia and Southern Africa. Port positions are
+              matched to cargo specification and voyage economics — not fixed allocations.
+            </p>
             <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 ["Jubail", "SA"], ["Yanbu", "SA"], ["Ruwais", "AE"], ["Fujairah", "AE"],

@@ -48,7 +48,7 @@ export function Footer() {
         </div>
 
           <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[0.7rem] tracking-[0.22em] uppercase text-ivory/50 font-mono">
-          <div>© {new Date().getFullYear()} Radiant Co. LLC</div>
+          <div>© {new Date().getFullYear()} Radiant Trading Co. LLC</div>
           <div>Est. MMXXIV · Dubai</div>
         </div>
       </div>

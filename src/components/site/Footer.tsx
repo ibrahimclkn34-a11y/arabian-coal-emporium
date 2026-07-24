@@ -15,7 +15,7 @@ export function Footer() {
             <p className="mt-6 max-w-md text-ivory/70 leading-relaxed">
               A private commodities house headquartered in the United Arab Emirates,
               trading petroleum coke and thermal coal to industrial buyers across
-              four continents since 2008.
+              four continents since 2024. Built on three decades of experience in Turkey.
             </p>
             <div className="mt-8 hairline opacity-30 max-w-md" />
             <div className="mt-6 font-mono text-[0.7rem] tracking-[0.22em] uppercase text-ivory/50">
@@ -47,9 +47,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[0.7rem] tracking-[0.22em] uppercase text-ivory/50 font-mono">
-          <div>© {new Date().getFullYear()} Radiant Trading Co. LLC</div>
-          <div>Est. MMVIII · Dubai</div>
+          <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[0.7rem] tracking-[0.22em] uppercase text-ivory/50 font-mono">
+          <div>© {new Date().getFullYear()} Radiant Co. LLC</div>
+          <div>Est. MMXXIV · Dubai</div>
         </div>
       </div>
     </footer>

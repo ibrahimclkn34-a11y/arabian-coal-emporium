@@ -64,7 +64,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Radiant Trading Co. is a Dubai-based commodities house supplying petroleum coke and thermal coal to cement, power and steel producers across four continents." },
       { name: "author", content: "Radiant Trading Co." },
       { property: "og:title", content: "Radiant Trading Co. — Petroleum Coke & Thermal Coal, UAE" },
-      { property: "og:description", content: "A private Dubai commodities house trading petcoke and thermal coal to industrial buyers worldwide since 2008." },
+      { property: "og:description", content: "A private Dubai commodities house trading petcoke and thermal coal to industrial buyers worldwide since 2024." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

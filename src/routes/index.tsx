@@ -65,7 +65,7 @@ function Home() {
               ["30+", "Years in carbon trading"],
               ["4", "Continents served"],
               ["2024", "Year established in UAE"],
-              ["Private", "Family-financed house"],
+              ["20+", "Companies worked with"],
             ].map(([n, l]) => (
               <div key={l} className="py-8 px-4 md:px-8 text-center md:text-left">
                 <div className="font-display text-4xl md:text-5xl">{n}</div>
@@ -95,7 +95,7 @@ function Home() {
               shape the global market.
             </p>
             <p>
-              We are a private, family-financed house. We do not chase volume;
+              We are a private commodities house. We do not chase volume;
               we chase certainty. Every cargo is delivered on our own paper, to
               counterparties we know personally, with inspection at every load
               and discharge.

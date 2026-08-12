@@ -39,10 +39,12 @@ export function Nav({ variant = "light" }: { variant?: "light" | "over-dark" }) 
           to="/"
           className={`flex items-center gap-3 ${overDark ? "text-ivory" : "text-foreground"}`}
         >
-          <img
+                    <img
             src={overDark ? logoDark.url : logoLight.url}
             alt="Radiant Trading"
-            className="h-10 w-auto"
+            className="h-10 w-auto object-contain [image-rendering:auto]"
+            decoding="async"
+            style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }}
           />
           <span className="sr-only">Radiant Trading</span>
         </Link>

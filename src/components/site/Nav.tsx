@@ -38,7 +38,7 @@ export function Nav({ variant = "light" }: { variant?: "light" | "over-dark" }) 
           to="/"
           className={`flex items-center gap-3 ${overDark ? "text-ivory" : "text-foreground"}`}
         >
-                    <RadiantLogo className="h-10 w-auto" />
+                    <RadiantLogo className="h-14 w-auto" />
           <span className="sr-only">Radiant Trading</span>
         </Link>
 

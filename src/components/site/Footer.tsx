@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-                                          <RadiantLogo className="h-14 w-auto" />
+                                          <RadiantLogo className="h-20 w-auto" />
               <span className="sr-only">Radiant Trading</span>
             </div>
             <p className="mt-6 max-w-md text-ivory/70 leading-relaxed">

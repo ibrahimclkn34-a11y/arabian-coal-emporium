@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoDark from "@/assets/radiant-logo-dark.png.asset.json";
-import logoLight from "@/assets/radiant-logo-light.png.asset.json";
+import { RadiantLogo } from "@/components/site/RadiantLogo";
 
 const links = [
   { to: "/", label: "Home" },
@@ -39,13 +38,7 @@ export function Nav({ variant = "light" }: { variant?: "light" | "over-dark" }) 
           to="/"
           className={`flex items-center gap-3 ${overDark ? "text-ivory" : "text-foreground"}`}
         >
-                    <img
-            src={overDark ? logoDark.url : logoLight.url}
-            alt="Radiant Trading"
-            className="h-10 w-auto object-contain [image-rendering:auto]"
-            decoding="async"
-            style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }}
-          />
+                    <RadiantLogo className="h-10 w-auto" />
           <span className="sr-only">Radiant Trading</span>
         </Link>
 

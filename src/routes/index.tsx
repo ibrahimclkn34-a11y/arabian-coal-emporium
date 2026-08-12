@@ -8,6 +8,14 @@ import dubai from "@/assets/dubai.jpg";
 import plant from "@/assets/plant.jpg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Radiant Trading Co. — Petroleum Coke & Thermal Coal, UAE" },
+      { name: "description", content: "A private commodities house in Dubai trading petroleum coke and thermal coal to power plants and cement factories across the Middle East, Africa, Asia and Europe." },
+      { property: "og:title", content: "Radiant Trading Co. — Petroleum Coke & Thermal Coal, UAE" },
+      { property: "og:description", content: "A private commodities house in Dubai trading petroleum coke and thermal coal to power plants and cement factories across the Middle East, Africa, Asia and Europe." },
+    ],
+  }),
   component: Home,
 });
 

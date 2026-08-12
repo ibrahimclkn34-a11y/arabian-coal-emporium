@@ -15,8 +15,39 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
+const WEB3FORMS_ACCESS_KEY = "52abc195-42b0-44b4-bdf8-ce6b3c9c6abc";
+
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+    setError(false);
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", "New enquiry from radianttradingco.com");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const result = await res.json();
+      if (result.success) {
+        setSent(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <div>
       <Nav />
@@ -52,19 +83,16 @@ function Contact() {
                   </p>
                 </div>
               ) : (
-                <form
-                  onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-                  className="space-y-6"
-                >
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="eyebrow text-ivory/60">— Enquiry</div>
                   <h2 className="font-display text-3xl md:text-4xl">Request a firm offer</h2>
 
                   <div className="grid grid-cols-2 gap-4 pt-4">
-                    <Input name="name" label="Full name" />
+                    <Input name="name" label="Full name" required />
                     <Input name="company" label="Company" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
-                    <Input name="email" type="email" label="Email" />
+                    <Input name="email" type="email" label="Email" required />
                     <Input name="country" label="Country" />
                   </div>
                   <Select name="commodity" label="Commodity" options={["Petroleum Coke", "Thermal Coal", "Other"]} />
@@ -72,12 +100,22 @@ function Contact() {
                   <div>
                     <label className="block font-mono text-[0.7rem] tracking-[0.2em] uppercase text-ivory/60 mb-2">Message</label>
                     <textarea
+                      name="message"
                       rows={4}
                       className="w-full bg-transparent border-b border-ivory/30 focus:border-ivory outline-none py-2 text-ivory placeholder:text-ivory/30"
                     />
                   </div>
-                  <button type="submit" className="btn-primary bg-ivory text-navy-ink hover:bg-ivory/90 mt-4">
-                    Send enquiry →
+                  {error && (
+                    <p className="text-sm text-red-400">
+                      Something went wrong sending your enquiry. Please try again, or email radiant@radiant-trading.co directly.
+                    </p>
+                  )}
+                  <button
+                    type="submit"
+                    disabled={sending}
+                    className="btn-primary bg-ivory text-navy-ink hover:bg-ivory/90 mt-4 disabled:opacity-60"
+                  >
+                    {sending ? "Sending…" : "Send enquiry →"}
                   </button>
                 </form>
               )}
@@ -99,12 +137,22 @@ function Field({ label, value, mono }: { label: string; value: React.ReactNode; 
   );
 }
 
-function Input({ name, label, type = "text" }: { name: string; label: string; type?: string }) {
+function Input({
+  name,
+  label,
+  type = "text",
+  required,
+}: {
+  name: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+}) {
   return (
     <div>
       <label htmlFor={name} className="block font-mono text-[0.7rem] tracking-[0.2em] uppercase text-ivory/60 mb-2">{label}</label>
       <input
-        id={name} name={name} type={type}
+        id={name} name={name} type={type} required={required}
         className="w-full bg-transparent border-b border-ivory/30 focus:border-ivory outline-none py-2 text-ivory"
       />
     </div>

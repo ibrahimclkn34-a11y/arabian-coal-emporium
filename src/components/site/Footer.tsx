@@ -8,7 +8,13 @@ export function Footer() {
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <img src={logoDark.url} alt="Radiant Trading" className="h-14 w-auto" />
+                            <img
+                src={logoDark.url}
+                alt="Radiant Trading"
+                className="h-14 w-auto object-contain [image-rendering:auto]"
+                decoding="async"
+                style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }}
+              />
             </div>
             <p className="mt-6 max-w-md text-ivory/70 leading-relaxed">
               A private commodities house headquartered in the United Arab Emirates,
